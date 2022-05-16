@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 
 const main = () => {
-  const options = cut_input(process.argv.slice(2))
+  const options = cutInput(process.argv.slice(2))
   console.log('    ', String(options.m), '月  ', String(options.y))
   const date = new Date(options.y, --options.m, '2')
-  print_cal_day()
-  print_cal_main(date)
+  printCalDay()
+  printCalMain(date)
 }
 
-const cut_input = (inputOptions) => {
+const cutInput = (inputOptions) => {
   const today = new Date()
   const defaultOption = {
     default: {
@@ -20,7 +20,7 @@ const cut_input = (inputOptions) => {
   return options
 }
 
-const print_cal_day = () => {
+const printCalDay = () => {
   const day = ['日', '月', '火', '水', '木', '金', '土']
   for (let index = 0; index < (day.length); index++) {
     process.stdout.write(day[index] + ' ')
@@ -28,15 +28,15 @@ const print_cal_day = () => {
   process.stdout.write('\n')
 }
 
-const print_cal_main = (date) => {
-  max_date = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate()
-  let week_of_day = date.getDay() - 1
+const printCalMain = (date) => {
+  // maxDate = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate()
+  let weekOfDay = date.getDay() - 1
   for (let index = 0; index < (date.getDay() - 1) * 3; index++) {
     process.stdout.write(' ')
   }
-  for (let index = 1; index <= max_date; index++) {
+  for (let index = 1; index <= new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate(); index++) {
     process.stdout.write(('  ' + index).slice(-2) + ' ')
-    ++week_of_day % 7 || process.stdout.write('\n')
+    ++weekOfDay % 7 || process.stdout.write('\n')
   }
   console.log()
 }
