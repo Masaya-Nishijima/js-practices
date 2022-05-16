@@ -9,10 +9,11 @@ const main = () => {
 }
 
 const cut_input = (inputOptions) => {
+  const today = new Date()
   const defaultOption = {
     default: {
-      m: 5,
-      y: 2022
+      m: today.getMonth() + 1,
+      y: today.getFullYear()
     }
   }
   const options = require('minimist')(inputOptions, defaultOption)
