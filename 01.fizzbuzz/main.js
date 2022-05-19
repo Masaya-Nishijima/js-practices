@@ -3,13 +3,8 @@ const MAX_NUM = 20;
 
 const main = () => {
   for (let i = 1; i <= MAX_NUM; i++) {
-    puts(fizzbuzz_changer(i))
+    console.log(fizzbuzz_changer(i))
   }
-}
-
-// 表示用関数
-const puts = (string) => {
-  console.log(string);
 }
 
 // FizzBuzz変換関数
