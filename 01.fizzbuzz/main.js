@@ -3,12 +3,12 @@ const MAX_NUM = 20;
 
 const main = () => {
   for (let i = 1; i <= MAX_NUM; i++) {
-    console.log(fizzbuzz_changer(i))
+    console.log(fizzbuzzChanger(i))
   }
 }
 
 // FizzBuzz変換関数
-const fizzbuzz_changer = (num) => {
+const fizzbuzzChanger = (num) => {
   let answer = '';
 
   num % 3 || (answer += 'Fizz'); // 3の倍数ならFizzをanswerに結合
