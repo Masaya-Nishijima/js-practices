@@ -9,7 +9,7 @@ const main = () => {
 
 // FizzBuzz変換関数
 const fizzbuzz_changer = (num) => {
-  var ans = '';
+  let ans = '';
 
   num % 3 || (ans += 'Fizz'); // 3の倍数ならFizzをansに結合
   num % 5 || (ans += 'Buzz'); // 5の倍数ならBuzzをansに結合
