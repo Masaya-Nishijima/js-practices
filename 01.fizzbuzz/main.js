@@ -9,13 +9,13 @@ const main = () => {
 
 // FizzBuzz変換関数
 const fizzbuzz_changer = (num) => {
-  let ans = '';
+  let answer = '';
 
-  num % 3 || (ans += 'Fizz'); // 3の倍数ならFizzをansに結合
-  num % 5 || (ans += 'Buzz'); // 5の倍数ならBuzzをansに結合
-  ans == '' && (ans += num); // ansが空のままならnumをそのまま返答
+  num % 3 || (answer += 'Fizz'); // 3の倍数ならFizzをanswerに結合
+  num % 5 || (answer += 'Buzz'); // 5の倍数ならBuzzをanswerに結合
+  answer == '' && (answer += num); // answerが空のままならnumをそのまま返答
 
-  return ans;
+  return answer;
 }
 
 // main関数を実行
