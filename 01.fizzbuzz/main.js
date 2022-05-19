@@ -13,7 +13,7 @@ const fizzbuzz_changer = (num) => {
 
   num % 3 || (ans += 'Fizz'); // 3の倍数ならFizzをansに結合
   num % 5 || (ans += 'Buzz'); // 5の倍数ならBuzzをansに結合
-  ans == '' && (ans = num); // ansが空のままならnumをそのまま返答
+  ans == '' && (ans += num); // ansが空のままならnumをそのまま返答
 
   return ans;
 }
