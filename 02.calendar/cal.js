@@ -3,7 +3,7 @@
 const main = () => {
   const options = cutInput(process.argv.slice(2))
   console.log(`      ${options.m}月 ${options.y}`)
-  const date = new Date(options.y, --options.m, '2')
+  const date = new Date(Date.UTC(options.y, --options.m, '1'))
   process.stdout.write('日 月 火 水 木 金 土\n')
   printCalMain(date)
 }
