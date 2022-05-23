@@ -3,7 +3,7 @@
 // Main関数
 const main = () => {
   const options = cutInput(process.argv.slice(2)) // 入力された引数を切り分け
-  console.log('    ', String(options.m), '月  ', String(options.y)) // 一行目の年月の表示
+  console.log(`      ${options.m}月 ${options.y}`) // 一行目の年月の表示
   const date = new Date(options.y, --options.m, '2') // 取り扱う年月を設定
   printCalDay() // 二行目の曜日(日~土)を表示
   printCalMain(date) // カレンダー本体(ex 1~31)の表示
