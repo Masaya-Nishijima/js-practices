@@ -33,12 +33,12 @@ const printCalDay = () => {
 
 /* カレンダー本体を表示する関数 */
 const printCalMain = (date) => {
-  // maxDate = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate()
+  const maxDate = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate()
   let weekOfDay = date.getDay() - 1 // 曜日を計算するための変数
   for (let index = 0; index < (date.getDay() - 1) * 3; index++) { // 初期位置調整用の空白を設置するループ
     process.stdout.write(' ')
   }
-  for (let index = 1; index <= new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate(); index++) { // カレンダー本体の描写をするループ
+  for (let index = 1; index <= maxDate; index++) { // カレンダー本体の描写をするループ
     process.stdout.write(('  ' + index).slice(-2) + ' ') // 二桁で数字を表示(空白埋め)
     ++weekOfDay % 7 || process.stdout.write('\n') // 土曜日なら改行をする。
   }
