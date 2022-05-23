@@ -23,8 +23,8 @@ const cutInput = (inputOptions) => {
 const printCalMain = (date) => {
   const maxDate = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate()
   let weekOfDay = date.getDay() - 1
-  for (let index = 0; index < (date.getDay() - 1) * 3; index++) {
-    process.stdout.write(' ')
+  for (let index = 0; index < weekOfDay; index++) {
+    process.stdout.write('   ')
   }
   for (let index = 1; index <= maxDate; index++) {
     process.stdout.write(('  ' + index).slice(-2) + ' ')
