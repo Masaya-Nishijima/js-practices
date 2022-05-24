@@ -16,8 +16,7 @@ const parseArgs = (inputOptions) => {
       y: today.getFullYear()
     }
   }
-  const options = require('minimist')(inputOptions, defaultOption)
-  return options
+  return require('minimist')(inputOptions, defaultOption)
 }
 
 const printCalMain = (date) => {
