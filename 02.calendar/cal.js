@@ -5,7 +5,7 @@ const main = () => {
   console.log(`      ${options.m}月 ${options.y}`)
   const date = new Date(Date.UTC(options.y, --options.m))
   process.stdout.write('日 月 火 水 木 金 土\n')
-  printCalMain(date)
+  printCalendar(date)
 }
 
 const parseArgs = (inputOptions) => {
@@ -19,7 +19,7 @@ const parseArgs = (inputOptions) => {
   return require('minimist')(inputOptions, defaultOption)
 }
 
-const printCalMain = (date) => {
+const printCalendar = (date) => {
   const maxDate = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate()
   let weekOfDay = date.getDay()
   for (let index = 0; index < weekOfDay; index++) {
