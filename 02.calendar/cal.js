@@ -28,7 +28,6 @@ const printCalMain = (date) => {
   }
   for (let index = 1; index <= maxDate; index++) {
     process.stdout.write(String(index).padStart(2, ' ') + ' ')
-    // process.stdout.write(('  ' + index).slice(-2) + ' ') // 不要になったコードだが、レビューによってはこちらに戻す可能性があるため残しています。
     ++weekOfDay % 7 || process.stdout.write('\n')
   }
   process.stdout.write('\n')
