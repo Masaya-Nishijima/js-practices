@@ -2,10 +2,10 @@
 
 const main = () => {
   const options = parseArgs(process.argv.slice(2))
-  const date = new Date(Date.UTC(options.y, options.m - 1, 1))
-
-  console.log(`      ${date.getMonth() + 1}月 ${date.getFullYear()}`)
+  console.log(`      ${options.m}月 ${options.y}`)
   process.stdout.write('日 月 火 水 木 金 土\n')
+
+  const date = new Date(Date.UTC(options.y, options.m - 1, 1))
   printCalendar(date)
 }
 
