@@ -3,7 +3,7 @@
 const main = () => {
   const options = parseArgs(process.argv.slice(2))
   console.log(`      ${options.m}月 ${options.y}`)
-  process.stdout.write('日 月 火 水 木 金 土\n')
+  console.log('日 月 火 水 木 金 土')
 
   const date = new Date(Date.UTC(options.y, options.m - 1, 1))
   printCalendar(date)
